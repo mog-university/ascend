@@ -2,35 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My First Website</title>
+  <title>MOG University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #000;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #d4af37;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    header {
+      padding: 100px 20px;
       text-align: center;
-      padding: 50px;
+      background: radial-gradient(circle at top, #111, #000);
     }
 
-    h1 {
-      color: #333;
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #d4af37;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0 auto 20px;
     }
 
-    p {
-      color: #555;
-      font-size: 18px;
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
 
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #111;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #222;
+    }
+
+    .testimonial {
+      font-style: italic;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #050505;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    input {
+      padding: 12px;
+      width: 100%;
+      max-width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Hello World 👋</h1>
-  <p>This is my first website on GitHub Pages.</p>
+<!-- HERO -->
+<header>
+  <div class="logo">MOG</div>
+  <h1>MOG <span class="gold">University</span></h1>
+  <p class="gold">Ascend Today</p>
+  <a href="#pricing" class="btn">Join Now</a>
+</header>
 
-  <button onclick="sayHello()">Click me</button
+<!-- ABOUT -->
+<section>
+  <h2>About MOG University</h2>
+  <p style="text-align:center; max-width:700px; margin:auto;">
+    MOG University is an elite online education platform built to help you
+    level up your mindset, skills, and income. Learn modern strategies,
+    discipline, and execution from structured systems designed for growth.
+  </p>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <h2>What You’ll Learn</h2>
+  <div class="grid">
+    <div class="card">💼 Business & Online Skills</div>
+    <div class="card">🧠 Mindset & Discipline</div>
+    <div class="card">📈 Personal Development</div>
+    <div class="card">🌐 Digital Opportunities</div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <h2>Student Results</h2>
+  <div class="grid">
+    <div class="card testimonial">“This platform completely changed how I think and act.”</div>
+    <div class="card testimonial">“The structure and mindset lessons are next level.”</div>
+    <div class="card testimonial">“Best decision I’ve made for self-improvement.”</div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <h2>Membership</h2>
+  <div class="card" style="text-align:center; max-width:400px; margin:auto;">
+    <h3>Full Access</h3>
+    <div class="price gold">$49 / month</div>
+    <p>Unlimited access to all courses & community</p>
+    <a href="#" class="btn">Join Now</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <strong>Who is this for?</strong>
+    <p>Anyone serious about improving their skills, mindset, and future.</p>
+  </div>
+  <div class="faq-item">
+    <strong>Is this beginner friendly?</strong>
+    <p>Yes. Everything is structured step-by-step.</p>
+  </div>
+  <div class="faq-item">
+    <strong>Can I cancel anytime?</strong>
+    <p>Yes, cancel whenever you want.</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section>
+  <h2>Get Updates</h2>
+  <p style="text-align:center;">Join the email list for announcements & drops.</p>
+  <div style="text-align:center;">
+    <input type="email" placeholder="Enter your email">
+    <br>
+    <a class="btn" onclick="alert('Email signup coming soon!')">Subscribe</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 MOG University. All rights reserved.
+</footer>
+
+</body>
+</html>
+
 
