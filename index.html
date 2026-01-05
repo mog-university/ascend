@@ -9,48 +9,80 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #000;
+      background: #000;
       color: #f5f5f5;
-      line-height: 1.6;
     }
 
-    a {
+    .gold { color: #d4af37; }
+
+    nav {
+      background: #050505;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
       text-decoration: none;
-      color: inherit;
     }
 
-    .gold {
-      color: #d4af37;
-    }
-
-    .btn {
+    .dropdown {
+      position: relative;
       display: inline-block;
-      padding: 14px 28px;
-      background: #d4af37;
-      color: #000;
-      font-weight: bold;
-      border-radius: 5px;
-      margin-top: 20px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #111;
+      min-width: 200px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px;
+      color: #fff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     header {
-      padding: 100px 20px;
       text-align: center;
+      padding: 120px 20px;
       background: radial-gradient(circle at top, #111, #000);
     }
 
     .logo {
       width: 90px;
       height: 90px;
-      border-radius: 50%;
       background: #d4af37;
       color: #000;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 20px;
-      margin: 0 auto 20px;
+      font-size: 22px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #d4af37;
+      color: #000;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     section {
@@ -59,10 +91,7 @@
       margin: auto;
     }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+    h2 { text-align: center; margin-bottom: 40px; }
 
     .grid {
       display: grid;
@@ -77,34 +106,20 @@
       border: 1px solid #222;
     }
 
-    .testimonial {
-      font-style: italic;
-    }
-
-    .price {
-      font-size: 32px;
-      font-weight: bold;
-      margin: 20px 0;
-    }
-
-    .faq-item {
-      margin-bottom: 20px;
-    }
-
     footer {
       background: #050505;
-      padding: 40px 20px;
+      padding: 40px;
       text-align: center;
       font-size: 14px;
       color: #aaa;
     }
 
     input {
-      padding: 12px;
+      padding: 14px;
       width: 100%;
-      max-width: 300px;
-      border: none;
+      max-width: 320px;
       border-radius: 5px;
+      border: none;
       margin-top: 10px;
     }
   </style>
@@ -112,90 +127,82 @@
 
 <body>
 
-<!-- HERO -->
+<nav>
+  <strong class="gold">Mog University</strong>
+  <div>
+    <a href="#about">About</a>
+
+    <div class="dropdown">
+      <a href="#">Growth ▾</a>
+      <div class="dropdown-content">
+        <a href="#physical">Physical Improvement</a>
+        <a href="#mental">Mental Growth</a>
+      </div>
+    </div>
+
+    <a href="#join">Join</a>
+    <a href="#email">Updates</a>
+  </div>
+</nav>
+
 <header>
   <div class="logo">Mog</div>
   <h1>Mog <span class="gold">University</span></h1>
-  <p class="gold">Ascend Today</p>
-  <a href="#pricing" class="btn">Join Now</a>
+  <p class="gold">Ascend Today — Physically & Mentally</p>
+  <a href="#join" class="btn">Join Now</a>
 </header>
 
-<!-- ABOUT -->
-<section>
-  <h2>About Mog University</h2>
+<section id="about">
+  <h2>What Is Mog University?</h2>
   <p style="text-align:center; max-width:700px; margin:auto;">
-    Mog University is an elite online education platform built to help you
-    level up your mindset, skills, and income. Learn modern strategies,
-    discipline, and execution from structured systems designed for growth.
+    Mog University is a personal growth platform focused on improving
+    appearance, confidence, discipline, mindset, and physical presence.
   </p>
 </section>
 
-<!-- FEATURES -->
-<section>
-  <h2>What You’ll Learn</h2>
+<section id="physical">
+  <h2>Physical Improvement</h2>
   <div class="grid">
-    <div class="card">💼 Business & Online Skills</div>
-    <div class="card">🧠 Mindset & Discipline</div>
-    <div class="card">📈 Personal Development</div>
-    <div class="card">🌐 Digital Opportunities</div>
+    <div class="card">💪 Fitness & strength</div>
+    <div class="card">🧼 Grooming & hygiene</div>
+    <div class="card">👔 Style & posture</div>
+    <div class="card">⚡ Energy & recovery</div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section>
-  <h2>Student Results</h2>
+<section id="mental">
+  <h2>Mental Growth</h2>
   <div class="grid">
-    <div class="card testimonial">“This platform completely changed how I think and act.”</div>
-    <div class="card testimonial">“The structure and mindset lessons are next level.”</div>
-    <div class="card testimonial">“Best decision I’ve made for self-improvement.”</div>
+    <div class="card">🧠 Confidence</div>
+    <div class="card">🔥 Discipline</div>
+    <div class="card">📅 Habits</div>
+    <div class="card">🎯 Focus</div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing">
-  <h2>Membership</h2>
-  <div class="card" style="text-align:center; max-width:400px; margin:auto;">
-    <h3>Full Access</h3>
-    <div class="price gold">$49 / month</div>
-    <p>Unlimited access to all courses & community</p>
-    <a href="#" class="btn">Join Now</a>
+<section id="join">
+  <h2>Join Mog University</h2>
+  <div class="card" style="max-width:400px; margin:auto; text-align:center;">
+    <p class="gold" style="font-size:32px;">$49 / month</p>
+    <a class="btn" href="#">Join Now</a>
   </div>
 </section>
 
-<!-- FAQ -->
-<section>
-  <h2>FAQ</h2>
-  <div class="faq-item">
-    <strong>Who is this for?</strong>
-    <p>Anyone serious about improving their skills, mindset, and future.</p>
-  </div>
-  <div class="faq-item">
-    <strong>Is this beginner friendly?</strong>
-    <p>Yes. Everything is structured step-by-step.</p>
-  </div>
-  <div class="faq-item">
-    <strong>Can I cancel anytime?</strong>
-    <p>Yes, cancel whenever you want.</p>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section>
+<section id="email">
   <h2>Get Updates</h2>
-  <p style="text-align:center;">Join the email list for announcements & drops.</p>
-  <div style="text-align:center;">
-    <input type="email" placeholder="Enter your email">
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="text-align:center;">
+    <input type="email" name="email" placeholder="Enter your email" required>
     <br>
-    <a class="btn" onclick="alert('Email signup coming soon!')">Subscribe</a>
-  </div>
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 Mog University. All rights reserved.
 </footer>
 
 </body>
 </html>
+
 
 
