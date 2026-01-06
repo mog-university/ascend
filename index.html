@@ -5,7 +5,6 @@
   <title>Mog University</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONT (LUXURY FEEL) -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -16,11 +15,8 @@
       color: #f2f2f2;
     }
 
-    .gold {
-      color: #c9a44c;
-    }
+    .gold { color: #c9a44c; }
 
-    /* NAVBAR */
     nav {
       background: rgba(5,5,5,0.9);
       padding: 18px 40px;
@@ -40,33 +36,8 @@
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: #c9a44c;
-    }
+    nav a:hover { color: #c9a44c; }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background: #0f0f0f;
-      min-width: 200px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 14px;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* HERO */
     header {
       height: 90vh;
       background:
@@ -78,19 +49,11 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 40px;
     }
 
     header h1 {
       font-size: 52px;
       margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 18px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
     }
 
     .btn-main {
@@ -101,8 +64,8 @@
       border-radius: 50px;
       font-weight: 700;
       text-decoration: none;
-      transition: all 0.3s ease;
       display: inline-block;
+      transition: 0.3s;
     }
 
     .btn-main:hover {
@@ -121,29 +84,39 @@
       text-align: center;
       font-size: 36px;
       margin-bottom: 60px;
-      letter-spacing: 1px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 40px;
     }
 
     .card-btn {
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
-        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80");
-      background-size: cover;
-      background-position: center;
-      padding: 50px 25px;
-      border-radius: 16px;
+      padding: 55px 25px;
+      border-radius: 18px;
       text-align: center;
       font-weight: 600;
       letter-spacing: 1px;
       text-decoration: none;
       color: #f2f2f2;
+      background-size: cover;
+      background-position: center;
       transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .card-btn::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      border-radius: 18px;
+    }
+
+    .card-btn span {
+      position: relative;
+      z-index: 1;
     }
 
     .card-btn:hover {
@@ -152,11 +125,22 @@
       color: #c9a44c;
     }
 
+    /* PHYSICAL IMAGES */
+    .fitness { background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80"); }
+    .grooming { background-image: url("https://images.unsplash.com/photo-1598971862319-63cc56f56c64?auto=format&fit=crop&w=900&q=80"); }
+    .style { background-image: url("https://images.unsplash.com/photo-1520974735194-6c95c1a2bfc8?auto=format&fit=crop&w=900&q=80"); }
+    .energy { background-image: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80"); }
+
+    /* MENTAL IMAGES */
+    .confidence { background-image: url("https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=900&q=80"); }
+    .discipline { background-image: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=900&q=80"); }
+    .habits { background-image: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=900&q=80"); }
+    .focus { background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"); }
+
     footer {
       background: #050505;
       padding: 50px;
       text-align: center;
-      font-size: 14px;
       color: #888;
     }
   </style>
@@ -166,51 +150,33 @@
 
 <nav>
   <strong class="gold">Mog University</strong>
-  <div>
-    <a href="#about">About</a>
-    <div class="dropdown">
-      <a href="#">Growth ▾</a>
-      <div class="dropdown-content">
-        <a href="#physical">Physical</a>
-        <a href="#mental">Mental</a>
-      </div>
-    </div>
-    <a href="#join">Join</a>
-  </div>
 </nav>
 
 <header>
   <div>
     <h1>Mog <span class="gold">University</span></h1>
     <p>Ascend Today — Physically & Mentally</p>
-    <a href="#join" class="btn-main">Join Now</a>
+    <a href="#physical" class="btn-main">Start Improving</a>
   </div>
 </header>
 
 <section id="physical">
   <h2>Physical Improvement</h2>
   <div class="grid">
-    <a href="physical-fitness.html" class="card-btn">Fitness & Strength</a>
-    <a href="physical-grooming.html" class="card-btn">Grooming & Hygiene</a>
-    <a href="physical-style.html" class="card-btn">Style & Posture</a>
-    <a href="physical-energy.html" class="card-btn">Energy & Recovery</a>
+    <a href="physical-fitness.html" class="card-btn fitness"><span>Fitness & Strength</span></a>
+    <a href="physical-grooming.html" class="card-btn grooming"><span>Grooming & Hygiene</span></a>
+    <a href="physical-style.html" class="card-btn style"><span>Style & Posture</span></a>
+    <a href="physical-energy.html" class="card-btn energy"><span>Energy & Recovery</span></a>
   </div>
 </section>
 
 <section id="mental">
   <h2>Mental Growth</h2>
   <div class="grid">
-    <a href="mental-confidence.html" class="card-btn">Confidence</a>
-    <a href="mental-discipline.html" class="card-btn">Discipline</a>
-    <a href="mental-habits.html" class="card-btn">Habits</a>
-    <a href="mental-focus.html" class="card-btn">Focus</a>
-  </div>
-</section>
-
-<section id="join">
-  <h2>Join Mog University</h2>
-  <div style="text-align:center;">
-    <a href="#" class="btn-main">Become Your Best Self</a>
+    <a href="mental-confidence.html" class="card-btn confidence"><span>Confidence</span></a>
+    <a href="mental-discipline.html" class="card-btn discipline"><span>Discipline</span></a>
+    <a href="mental-habits.html" class="card-btn habits"><span>Habits</span></a>
+    <a href="mental-focus.html" class="card-btn focus"><span>Focus</span></a>
   </div>
 </section>
 
