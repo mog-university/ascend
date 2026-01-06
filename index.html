@@ -3,254 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mog University</title>
+  <title>Personal Development Course</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    * {
+    /* Basic styling for buttons, sections, quotes, navbar */
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f5f5f5;
     }
-
-    body {
-      background-color: #0b0b0b;
-      color: #f5f5f5;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* NAVIGATION */
     nav {
       display: flex;
       justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #333;
+      color: white;
       align-items: center;
-      padding: 20px 40px;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     }
-
-    .logo {
-      font-size: 22px;
-      color: #d4af37;
-      font-weight: bold;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
     }
-
-    /* DROPDOWN */
     .dropdown {
       position: relative;
       display: inline-block;
     }
-
-    .dropbtn {
-      background-color: #0b0b0b;
-      color: #d4af37;
-      padding: 10px 18px;
-      border: 1px solid #d4af37;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #111;
-      min-width: 180px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.7);
+      right: 0;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
       z-index: 1;
-      border: 1px solid #d4af37;
-      border-radius: 4px;
     }
-
     .dropdown-content a {
-      color: #f5f5f5;
+      color: black;
       padding: 12px 16px;
+      text-decoration: none;
       display: block;
     }
-
-    .dropdown-content a:hover {
-      background-color: #222;
-    }
-
     .dropdown:hover .dropdown-content {
       display: block;
     }
-
-    /* HERO SECTION */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    header {
       text-align: center;
-      padding: 100px 20px;
-      background: url('images/12234before&after.jpg') no-repeat center/cover;
+      padding: 4rem 2rem 2rem 2rem;
+      background: url('images/12234before&after.jpg') center/cover no-repeat;
+      color: white;
     }
-
-    .hero h1 {
-      font-size: 48px;
-      color: #d4af37;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 5px #000;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
-
-    .hero p {
-      font-size: 20px;
-      color: #fff;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 3px #000;
-    }
-
-    .hero .cta {
-      padding: 15px 30px;
-      background-color: #d4af37;
-      color: #000;
+    header .cta-button {
+      padding: 1rem 2rem;
+      background-color: #ff6b6b;
+      color: white;
       font-weight: bold;
-      border-radius: 6px;
-      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
     }
-
-    .hero .cta:hover {
-      background-color: #fff;
-    }
-
-    /* BUTTON GRID */
-    .button-grid {
+    .buttons-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      padding: 60px 20px;
+      gap: 2rem;
+      padding: 3rem 2rem;
     }
-
-    .button-grid button {
-      position: relative;
-      width: 250px;
-      height: 250px;
-      border: none;
-      border-radius: 10px;
-      overflow: hidden;
-      font-size: 24px;
-      font-weight: bold;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.3s;
+    .button {
+      width: 200px;
+      height: 200px;
       background-size: cover;
       background-position: center;
-    }
-
-    .button-grid button:hover {
-      transform: scale(1.05);
-    }
-
-    /* BUTTON TEXT OVERLAY */
-    .button-grid button span {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      z-index: 2;
-      text-shadow: 2px 2px 5px #000;
-    }
-
-    /* PERSONALIZED COURSE SLIDE */
-    .personal-slide {
-      background-color: #111;
-      border-top: 2px solid #d4af37;
-      border-bottom: 2px solid #d4af37;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
       text-align: center;
-      padding: 60px 20px;
-      font-size: 22px;
-      color: #fff;
     }
-
-    /* STUDENT QUOTES */
     .quotes-section {
-      padding: 60px 20px;
+      background-color: #eee;
+      padding: 3rem 2rem;
       text-align: center;
-      background-color: #0b0b0b;
     }
-
-    .quotes-section h2 {
-      font-size: 36px;
-      color: #d4af37;
-      margin-bottom: 40px;
-    }
-
     .quote {
-      max-width: 700px;
-      margin: 20px auto;
-      font-size: 20px;
-      color: #ddd;
+      max-width: 600px;
+      margin: 1rem auto;
       font-style: italic;
+      color: #333;
     }
-
-    footer {
+    .personalized-course {
+      background-color: #333;
+      color: white;
       text-align: center;
-      padding: 30px 20px;
-      color: #888;
-      border-top: 1px solid rgba(212, 175, 55, 0.3);
-    }
-
-    @media (max-width: 800px) {
-      .button-grid { flex-direction: column; align-items: center; }
-      .hero h1 { font-size: 36px; }
+      padding: 3rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- Navbar -->
   <nav>
-    <div class="logo">Mog University</div>
-    <div class="dropdown">
-      <button class="dropbtn">Contact Us</button>
-      <div class="dropdown-content">
-        <a href="contact.html">Email</a>
+    <div><a href="index.html">Home</a></div>
+    <div>
+      <a href="signup.html" class="cta-button">Start Improving</a>
+      <div class="dropdown">
+        <a href="#">Contact Us ▼</a>
+        <div class="dropdown-content">
+          <a href="contact.html">Email: ellislouschroeder@gmail.com</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h1>Transform Yourself Today</h1>
-    <p>Start improving your discipline, style, and hygiene with our personalized course.</p>
-    <a href="signup.html" class="cta">Start Improving</a>
+  <!-- Header -->
+  <header>
+    <h1>Transform Your Life Today</h1>
+    <p>Take small steps to boost your confidence, style, discipline, and hygiene.</p>
+  </header>
+
+  <!-- Buttons Section -->
+  <section class="buttons-section">
+    <!-- Custom Images -->
+    <div class="button" style="background-image: url('images/12234.jpg');">Discipline</div>
+    <div class="button" style="background-image: url('images/12234hygene.jpg');">Grooming</div>
+    <div class="button" style="background-image: url('images/style12234.webp');">Style</div>
+    <div class="button" style="background-image: url('images/12234confidence.jpg');">Confidence</div>
+
+    <!-- Unsplash images for remaining buttons -->
+    <div class="button" style="background-image: url('images/unsplash1.jpg');">Focus</div>
+    <div class="button" style="background-image: url('images/unsplash2.jpg');">Motivation</div>
+    <div class="button" style="background-image: url('images/unsplash3.jpg');">Productivity</div>
   </section>
 
-  <!-- BUTTON GRID -->
-  <div class="button-grid">
-    <button style="background-image: url('images/12234.jpg')">
-      <span>Discipline</span>
-    </button>
-    <button style="background-image: url('images/12234posture.jpg')">
-      <span>Style & Posture</span>
-    </button>
-    <button style="background-image: url('images/12234hygene.jpg')">
-      <span>Hygiene</span>
-    </button>
-    <!-- Reuse unsplash images for remaining buttons -->
-    <button style="background-image: url('images/unsplash1.jpg')"><span>Fitness</span></button>
-    <button style="background-image: url('images/unsplash2.jpg')"><span>Nutrition</span></button>
-    <button style="background-image: url('images/unsplash3.jpg')"><span>Mental Health</span></button>
-  </div>
-
-  <!-- PERSONALIZED COURSE SLIDE -->
-  <div class="personal-slide">
-    Your course is fully personalized to help you succeed step by step.
-  </div>
-
-  <!-- STUDENT QUOTES -->
+  <!-- Quotes Section -->
   <section class="quotes-section">
-    <h2>Success Stories</h2>
-    <div class="quote">"This course completely changed my mornings. I feel more disciplined than ever!" — Alex</div>
-    <div class="quote">"I never thought posture could make such a difference. Truly life-changing." — Jordan</div>
-    <div class="quote">"Hygiene and style tips are simple yet so effective. I feel confident daily!" — Taylor</div>
+    <h2>What Our Students Say</h2>
+    <div class="quote">"This course changed the way I approach daily challenges. I feel unstoppable!" – Alex J.</div>
+    <div class="quote">"I never thought I could improve my style and confidence so quickly." – Mia R.</div>
+    <div class="quote">"The discipline lessons are gold. I finally wake up on time!" – Liam K.</div>
+    <div class="quote">"I feel like a completely new person thanks to this program." – Zoe P.</div>
   </section>
 
-  <footer>
-    © 2026 Mog University
-  </footer>
+  <!-- Personalized Course Slide -->
+  <section class="personalized-course">
+    Ready to create your personalized course and start improving your life today?
+  </section>
 
 </body>
 </html>
