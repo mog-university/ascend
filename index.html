@@ -38,22 +38,30 @@
 
     nav a:hover { color: #c9a44c; }
 
+    /* HERO */
     header {
       height: 90vh;
       background:
         linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.95)),
-        url("https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=1600&q=80");
+        url("https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?auto=format&fit=crop&w=1600&q=80");
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 40px;
     }
 
     header h1 {
       font-size: 52px;
       margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .btn-main {
@@ -65,7 +73,7 @@
       font-weight: 700;
       text-decoration: none;
       display: inline-block;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     .btn-main:hover {
@@ -125,17 +133,35 @@
       color: #c9a44c;
     }
 
-    /* PHYSICAL IMAGES */
-    .fitness { background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80"); }
-    .grooming { background-image: url("https://images.unsplash.com/photo-1598971862319-63cc56f56c64?auto=format&fit=crop&w=900&q=80"); }
-    .style { background-image: url("https://images.unsplash.com/photo-1520974735194-6c95c1a2bfc8?auto=format&fit=crop&w=900&q=80"); }
-    .energy { background-image: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80"); }
+    /* PHYSICAL */
+    .fitness {
+      background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80");
+    }
 
-    /* MENTAL IMAGES */
-    .confidence { background-image: url("https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=900&q=80"); }
-    .discipline { background-image: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=900&q=80"); }
-    .habits { background-image: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=900&q=80"); }
-    .focus { background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"); }
+    .grooming {
+      background-image: url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .style {
+      background-image: url("https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .energy {
+      background-image: url("https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=900&q=80");
+    }
+
+    /* MENTAL */
+    .confidence {
+      background-image: url("https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .discipline {
+      background-image: url("https://images.unsplash.com/photo-1525097487452-6278ff080c31?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .habits {
+      background-image: url("https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=900&q=80");
+    }
 
     footer {
       background: #050505;
@@ -176,47 +202,17 @@
     <a href="mental-confidence.html" class="card-btn confidence"><span>Confidence</span></a>
     <a href="mental-discipline.html" class="card-btn discipline"><span>Discipline</span></a>
     <a href="mental-habits.html" class="card-btn habits"><span>Habits</span></a>
-    <a href="mental-focus.html" class="card-btn focus"><span>Focus</span></a>
   </div>
 </section>
 
-  <section id="personalized">
+<section>
   <h2>Your Personalized Improvement Path</h2>
-
-  <p style="
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.8;
-  ">
-    Mog University is built around the idea that improvement is not one-size-fits-all.
-    Everyone starts at a different level, has different strengths, and different goals.
-  </p>
-
-  <p style="
-    max-width: 800px;
-    margin: 40px auto 0;
-    text-align: center;
-    line-height: 1.8;
-  ">
-    Instead of random advice, the course provides a structured and personalized guide
-    that helps you focus on what matters most for <strong>your</strong> growth —
-    physically and mentally.
-  </p>
-
-  <p style="
-    max-width: 800px;
-    margin: 40px auto 0;
-    text-align: center;
-    line-height: 1.8;
-  ">
-    You’ll learn how to assess your current position, identify weaknesses,
-    and follow a clear improvement path designed to build confidence,
-    discipline, and presence over time.
+  <p style="max-width:800px;margin:auto;text-align:center;line-height:1.8;">
+    Mog University provides a structured, personalized path to self-improvement.
+    Instead of guessing what to fix, you’ll learn how to identify weaknesses
+    and focus on the changes that create the biggest impact — physically and mentally.
   </p>
 </section>
-
 
 <footer>
   © 2026 Mog University. All rights reserved.
