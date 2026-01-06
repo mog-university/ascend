@@ -15,6 +15,7 @@
 
     .gold { color: #d4af37; }
 
+    /* NAVBAR */
     nav {
       background: #050505;
       padding: 15px 30px;
@@ -28,8 +29,9 @@
 
     nav a {
       color: #fff;
-      margin: 0 10px;
       text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
     }
 
     .dropdown {
@@ -48,12 +50,14 @@
       display: block;
       padding: 12px;
       color: #fff;
+      text-decoration: none;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
+    /* HERO */
     header {
       text-align: center;
       padding: 120px 20px;
@@ -74,7 +78,7 @@
       margin: auto;
     }
 
-    .btn {
+    .btn-main {
       display: inline-block;
       margin-top: 25px;
       padding: 14px 30px;
@@ -91,19 +95,35 @@
       margin: auto;
     }
 
-    h2 { text-align: center; margin-bottom: 40px; }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
+    /* BUTTON GRID */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 30px;
     }
 
-    .card {
-      background: #111;
+    .card-btn {
+      display: block;
+      background: #d4af37;
+      color: #000;
       padding: 30px;
+      text-align: center;
+      font-weight: bold;
       border-radius: 10px;
-      border: 1px solid #222;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .card-btn:hover {
+      background: #000;
+      color: #d4af37;
+      border: 1px solid #d4af37;
+      cursor: pointer;
     }
 
     footer {
@@ -122,11 +142,16 @@
       border: none;
       margin-top: 10px;
     }
+
+    button {
+      border: none;
+    }
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <strong class="gold">Mog University</strong>
   <div>
@@ -135,8 +160,8 @@
     <div class="dropdown">
       <a href="#">Growth ▾</a>
       <div class="dropdown-content">
-        <a href="#physical">Physical Improvement</a>
-        <a href="#mental">Mental Growth</a>
+        <a href="#physical">Physical</a>
+        <a href="#mental">Mental</a>
       </div>
     </div>
 
@@ -145,56 +170,63 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <header>
   <div class="logo">Mog</div>
   <h1>Mog <span class="gold">University</span></h1>
   <p class="gold">Ascend Today — Physically & Mentally</p>
-  <a href="#join" class="btn">Join Now</a>
+  <a href="#join" class="btn-main">Join Now</a>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
   <h2>What Is Mog University?</h2>
   <p style="text-align:center; max-width:700px; margin:auto;">
-    Mog University is a personal growth platform focused on improving
-    appearance, confidence, discipline, mindset, and physical presence.
+    Mog University is a personal growth platform focused on improving appearance,
+    confidence, discipline, mindset, and physical presence through structured systems.
   </p>
 </section>
 
+<!-- PHYSICAL -->
 <section id="physical">
   <h2>Physical Improvement</h2>
   <div class="grid">
-    <a href="physical-fitness.html" class="card">💪 Fitness & Strength</a>
-    <a href="physical-grooming.html" class="card">🧼 Grooming & Hygiene</a>
-    <a href="physical-style.html" class="card">👔 Style & Posture</a>
-    <a href="physical-energy.html" class="card">⚡ Energy & Recovery</a>
+    <a href="physical-fitness.html" class="card-btn">💪 Fitness & Strength</a>
+    <a href="physical-grooming.html" class="card-btn">🧼 Grooming & Hygiene</a>
+    <a href="physical-style.html" class="card-btn">👔 Style & Posture</a>
+    <a href="physical-energy.html" class="card-btn">⚡ Energy & Recovery</a>
   </div>
 </section>
 
-
+<!-- MENTAL -->
 <section id="mental">
   <h2>Mental Growth</h2>
   <div class="grid">
-    <div class="card">🧠 Confidence</div>
-    <div class="card">🔥 Discipline</div>
-    <div class="card">📅 Habits</div>
-    <div class="card">🎯 Focus</div>
+    <a href="mental-confidence.html" class="card-btn">🧠 Confidence</a>
+    <a href="mental-discipline.html" class="card-btn">🔥 Discipline</a>
+    <a href="mental-habits.html" class="card-btn">📅 Habits</a>
+    <a href="mental-focus.html" class="card-btn">🎯 Focus</a>
   </div>
 </section>
 
+<!-- JOIN -->
 <section id="join">
   <h2>Join Mog University</h2>
-  <div class="card" style="max-width:400px; margin:auto; text-align:center;">
+  <div style="max-width:400px; margin:auto; text-align:center;">
     <p class="gold" style="font-size:32px;">$49 / month</p>
-    <a class="btn" href="#">Join Now</a>
+    <a href="#" class="btn-main">Join Now</a>
   </div>
 </section>
 
+<!-- EMAIL -->
 <section id="email">
   <h2>Get Updates</h2>
+  <p style="text-align:center;">Tips, drops, and announcements.</p>
+
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="text-align:center;">
     <input type="email" name="email" placeholder="Enter your email" required>
-    <br>
-    <button class="btn" type="submit">Subscribe</button>
+    <br><br>
+    <button type="submit" class="btn-main">Subscribe</button>
   </form>
 </section>
 
@@ -204,6 +236,3 @@
 
 </body>
 </html>
-
-
-
