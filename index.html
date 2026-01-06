@@ -2,50 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mog University</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Mog University | Ascend Today</title>
 
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(180deg, #050505, #000);
-      color: #f2f2f2;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Arial, sans-serif;
     }
 
-    .gold { color: #c9a44c; }
-
-    nav {
-      background: rgba(5,5,5,0.9);
-      padding: 18px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(6px);
-      z-index: 100;
+    body {
+      background-color: #0b0b0b;
+      color: #f5f5f5;
+      line-height: 1.6;
     }
 
-    nav a {
-      color: #eee;
-      margin-left: 18px;
+    a {
       text-decoration: none;
-      font-weight: 500;
+      color: inherit;
     }
 
-    nav a:hover { color: #c9a44c; }
+    /* ---------------- HERO SECTION ---------------- */
 
-    /* HERO */
     header {
-      height: 90vh;
+      height: 100vh;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.95)),
-        url("https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
+        linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.95)),
+        url("images/12234before&after.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -54,169 +38,259 @@
     }
 
     header h1 {
-      font-size: 52px;
-      margin-bottom: 10px;
+      font-size: 64px;
+      letter-spacing: 2px;
+      color: #d4af37;
     }
 
     header p {
-      font-size: 18px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      font-size: 22px;
+      margin-top: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #e0e0e0;
     }
 
-    .btn-main {
-      margin-top: 30px;
-      padding: 16px 38px;
-      background: linear-gradient(135deg, #c9a44c, #9e7c28);
-      color: #000;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
+    .cta-btn {
       display: inline-block;
+      margin-top: 40px;
+      padding: 15px 40px;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      font-size: 18px;
       transition: all 0.3s ease;
     }
 
-    .btn-main:hover {
-      background: #000;
-      color: #c9a44c;
-      border: 1px solid #c9a44c;
+    .cta-btn:hover {
+      background-color: #d4af37;
+      color: #000;
     }
+
+    /* ---------------- SECTION BASE ---------------- */
 
     section {
-      padding: 100px 30px;
-      max-width: 1200px;
-      margin: auto;
+      padding: 100px 8%;
     }
 
-    h2 {
+    section h2 {
       text-align: center;
-      font-size: 36px;
-      margin-bottom: 60px;
+      font-size: 42px;
+      color: #d4af37;
+      margin-bottom: 20px;
     }
+
+    section .subtitle {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 70px;
+      color: #cfcfcf;
+      font-size: 18px;
+    }
+
+    /* ---------------- IMPROVEMENT GRID ---------------- */
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 40px;
+      gap: 30px;
     }
 
-    .card-btn {
-      padding: 55px 25px;
-      border-radius: 18px;
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-decoration: none;
-      color: #f2f2f2;
-      background-size: cover;
-      background-position: center;
-      transition: all 0.4s ease;
+    .card {
       position: relative;
+      height: 320px;
+      border: 1px solid rgba(212,175,55,0.25);
+      overflow: hidden;
+      transition: transform 0.3s ease;
     }
 
-    .card-btn::before {
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.65);
-      border-radius: 18px;
-    }
-
-    .card-btn span {
-      position: relative;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.9));
       z-index: 1;
     }
 
-    .card-btn:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.9);
-      color: #c9a44c;
+    .card-content {
+      position: absolute;
+      bottom: 30px;
+      left: 20px;
+      right: 20px;
+      z-index: 2;
     }
 
-    /* PHYSICAL */
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #d4af37;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #dddddd;
+    }
+
+    .card-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 18px;
+      border: 1px solid #d4af37;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .card-btn:hover {
+      background-color: #000;
+      border-color: #000;
+      color: #d4af37;
+    }
+
+    /* ---------------- CARD BACKGROUNDS ---------------- */
+
     .fitness {
-      background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80");
+      background: url("images/fitness-placeholder.jpg") center/cover no-repeat;
     }
 
     .grooming {
-      background-image: url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80");
+      background: url("images/12234hygene.jpg") center/cover no-repeat;
     }
 
     .style {
-      background-image: url("https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?auto=format&fit=crop&w=900&q=80");
+      background: url("images/12234posture.jpg") center/cover no-repeat;
     }
 
     .energy {
-      background-image: url("https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=900&q=80");
+      background: url("images/energy-placeholder.jpg") center/cover no-repeat;
     }
 
-    /* MENTAL */
     .confidence {
-      background-image: url("https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=900&q=80");
+      background: url("images/confidence-placeholder.jpg") center/cover no-repeat;
     }
 
     .discipline {
-      background-image: url("https://images.unsplash.com/photo-1525097487452-6278ff080c31?auto=format&fit=crop&w=900&q=80");
+      background: url("images/12234.jpg") center/cover no-repeat;
     }
 
     .habits {
-      background-image: url("https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=900&q=80");
+      background: url("images/habits-placeholder.jpg") center/cover no-repeat;
     }
 
-    footer {
-      background: #050505;
-      padding: 50px;
-      text-align: center;
-      color: #888;
+    .focus {
+      background: url("images/focus-placeholder.jpg") center/cover no-repeat;
     }
+
+    /* ---------------- FOOTER ---------------- */
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      border-top: 1px solid rgba(212,175,55,0.25);
+      color: #999;
+      font-size: 14px;
+    }
+
   </style>
 </head>
 
 <body>
 
-<nav>
-  <strong class="gold">Mog University</strong>
-</nav>
+  <!-- HERO -->
+  <header>
+    <div>
+      <h1>Mog University</h1>
+      <p>
+        Ascend today through deliberate personal evolution —
+        physical dominance, mental clarity, and elite discipline.
+      </p>
+      <a href="#improvements" class="cta-btn">Start Improving</a>
+    </div>
+  </header>
 
-<header>
-  <div>
-    <h1>Mog <span class="gold">University</span></h1>
-    <p>Ascend Today — Physically & Mentally</p>
-    <a href="#physical" class="btn-main">Start Improving</a>
-  </div>
-</header>
+  <!-- IMPROVEMENTS -->
+  <section id="improvements">
+    <h2>Your Path to Mastery</h2>
+    <p class="subtitle">
+      Mog University delivers a personalized system for transforming your
+      appearance, mindset, and daily execution — built for men who demand more.
+    </p>
 
-<section id="physical">
-  <h2>Physical Improvement</h2>
-  <div class="grid">
-    <a href="physical-fitness.html" class="card-btn fitness"><span>Fitness & Strength</span></a>
-    <a href="physical-grooming.html" class="card-btn grooming"><span>Grooming & Hygiene</span></a>
-    <a href="physical-style.html" class="card-btn style"><span>Style & Posture</span></a>
-    <a href="physical-energy.html" class="card-btn energy"><span>Energy & Recovery</span></a>
-  </div>
-</section>
+    <div class="grid">
 
-<section id="mental">
-  <h2>Mental Growth</h2>
-  <div class="grid">
-    <a href="mental-confidence.html" class="card-btn confidence"><span>Confidence</span></a>
-    <a href="mental-discipline.html" class="card-btn discipline"><span>Discipline</span></a>
-    <a href="mental-habits.html" class="card-btn habits"><span>Habits</span></a>
-  </div>
-</section>
+      <a href="physical-fitness.html" class="card fitness">
+        <div class="card-content">
+          <h3>Physical Fitness</h3>
+          <p>Build strength, muscle, and presence.</p>
+          <span class="card-btn">Learn More</span>
+        </div>
+      </a>
 
-<section>
-  <h2>Your Personalized Improvement Path</h2>
-  <p style="max-width:800px;margin:auto;text-align:center;line-height:1.8;">
-    Mog University provides a structured, personalized path to self-improvement.
-    Instead of guessing what to fix, you’ll learn how to identify weaknesses
-    and focus on the changes that create the biggest impact — physically and mentally.
-  </p>
-</section>
+      <a href="physical-grooming.html" class="card grooming">
+        <div class="card-content">
+          <h3>Grooming & Hygiene</h3>
+          <p>Master cleanliness, skin, and facial aesthetics.</p>
+          <span class="card-btn">Learn More</span>
+        </div>
+      </a>
 
-<footer>
-  © 2026 Mog University. All rights reserved.
-</footer>
+      <a href="physical-style.html" class="card style">
+        <div class="card-content">
+          <h3>Style & Posture</h3>
+          <p>Command attention through posture and dress.</p>
+          <span class="card-btn">Learn More</span>
+        </div>
+      </a>
+
+      <a href="physical-energy.html" class="card energy">
+        <div class="card-content">
+          <h3>Energy & Recovery</h3>
+          <p>Optimize sleep, recovery, and vitality.</p>
+          <span class="card-btn">Learn More</span>
+        </div>
+      </a>
+
+      <a href="mental-confidence.html" class="card confidence">
+        <div class="card-content">
+          <h3>Confidence</h3>
+          <p>Build unshakable self-belief.</p>
+          <span class="card-btn">Learn More</span>
+        </div>
+      </a>
+
+      <a href="mental-discipline.html" class="card discipline">
+        <div class="card-content">
+          <h3>Discipline</h3>
+          <p>Wake early. Execute daily. Win consistently.</p>
+          <span class="card-btn">Learn More</span>
+        </div>
+      </a>
+
+      <a href="mental-habits.html" class="card habits">
+        <div class="card-content">
+          <h3>Habits</h3>
+          <p>Design routines that compound success.</p>
+          <span class="card-btn">Learn More</span>
+        </div>
+      </a>
+
+      <a href="mental-focus.html" class="card focus">
+        <div class="card-content">
+          <h3>Focus</h3>
+          <p>Eliminate distraction. Lock in.</p>
+          <span class="card-btn">Learn More</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Mog University. Ascend Today.
+  </footer>
 
 </body>
 </html>
