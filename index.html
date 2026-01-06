@@ -40,7 +40,7 @@
       background: none;
       border: 1px solid #d4af37;
       color: #d4af37;
-      padding: 8px 16px;
+      padding: 8px 18px;
       cursor: pointer;
       font-size: 14px;
     }
@@ -51,14 +51,13 @@
       right: 0;
       background-color: #000;
       border: 1px solid #d4af37;
-      min-width: 220px;
+      min-width: 200px;
     }
 
     .dropdown-content a {
       display: block;
       padding: 12px;
       font-size: 14px;
-      color: #f5f5f5;
     }
 
     .dropdown-content a:hover {
@@ -185,20 +184,39 @@
       font-size: 14px;
     }
 
-    .card-btn:hover {
-      background-color: #000;
-    }
-
     /* ---------------- CARD IMAGES ---------------- */
 
-    .fitness { background: url("images/fitness-placeholder.jpg") center/cover; }
-    .grooming { background: url("images/12234hygene.jpg") center/cover; }
-    .style { background: url("images/12234posture.jpg") center/cover; }
-    .energy { background: url("images/energy-placeholder.jpg") center/cover; }
-    .confidence { background: url("images/confidence-placeholder.jpg") center/cover; }
-    .discipline { background: url("images/12234.jpg") center/cover; }
-    .habits { background: url("images/habits-placeholder.jpg") center/cover; }
-    .focus { background: url("images/focus-placeholder.jpg") center/cover; }
+    .fitness {
+      background: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438") center/cover;
+    }
+
+    .grooming {
+      background: url("images/12234hygene.jpg") center/cover;
+    }
+
+    .style {
+      background: url("images/12234posture.jpg") center/cover;
+    }
+
+    .energy {
+      background: url("https://images.unsplash.com/photo-1605296867304-46d5465a13f1") center/cover;
+    }
+
+    .confidence {
+      background: url("https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb") center/cover;
+    }
+
+    .discipline {
+      background: url("images/12234.jpg") center/cover;
+    }
+
+    .habits {
+      background: url("https://images.unsplash.com/photo-1483721310020-03333e577078") center/cover;
+    }
+
+    .focus {
+      background: url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d") center/cover;
+    }
 
     /* ---------------- TESTIMONIALS ---------------- */
 
@@ -213,7 +231,6 @@
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
-      color: #ddd;
       font-style: italic;
     }
 
@@ -224,22 +241,19 @@
       font-style: normal;
     }
 
-    /* ---------------- PERSONALIZED SLIDE ---------------- */
+    /* ---------------- PERSONALIZED ---------------- */
 
     .personalized {
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,1));
       text-align: center;
+      background: linear-gradient(to bottom, #050505, #000);
     }
 
     .personalized p {
       max-width: 800px;
-      margin: 30px auto;
+      margin: 25px auto;
       font-size: 18px;
       color: #ddd;
     }
-
-    /* ---------------- FOOTER ---------------- */
 
     footer {
       padding: 40px;
@@ -259,7 +273,7 @@
     <div class="dropdown">
       <button class="dropbtn">Menu</button>
       <div class="dropdown-content">
-        <a href="mailto:ellislouschroeder@gmail.com">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
       </div>
     </div>
   </nav>
@@ -279,14 +293,14 @@
     <p class="subtitle">A complete system for appearance, mindset, and execution.</p>
 
     <div class="grid">
-      <a href="physical-fitness.html" class="card fitness"><div class="card-content"><h3>Physical Fitness</h3><p>Strength, muscle, presence.</p><span class="card-btn">Learn More</span></div></a>
-      <a href="physical-grooming.html" class="card grooming"><div class="card-content"><h3>Grooming & Hygiene</h3><p>Clean, sharp, controlled.</p><span class="card-btn">Learn More</span></div></a>
+      <a href="physical-fitness.html" class="card fitness"><div class="card-content"><h3>Physical Fitness</h3><p>Strength and presence.</p><span class="card-btn">Learn More</span></div></a>
+      <a href="physical-grooming.html" class="card grooming"><div class="card-content"><h3>Grooming & Hygiene</h3><p>Clean and sharp.</p><span class="card-btn">Learn More</span></div></a>
       <a href="physical-style.html" class="card style"><div class="card-content"><h3>Style & Posture</h3><p>Command attention.</p><span class="card-btn">Learn More</span></div></a>
-      <a href="physical-energy.html" class="card energy"><div class="card-content"><h3>Energy & Recovery</h3><p>High output daily.</p><span class="card-btn">Learn More</span></div></a>
+      <a href="physical-energy.html" class="card energy"><div class="card-content"><h3>Energy & Recovery</h3><p>Daily performance.</p><span class="card-btn">Learn More</span></div></a>
       <a href="mental-confidence.html" class="card confidence"><div class="card-content"><h3>Confidence</h3><p>Unshakable belief.</p><span class="card-btn">Learn More</span></div></a>
-      <a href="mental-discipline.html" class="card discipline"><div class="card-content"><h3>Discipline</h3><p>Execute without emotion.</p><span class="card-btn">Learn More</span></div></a>
-      <a href="mental-habits.html" class="card habits"><div class="card-content"><h3>Habits</h3><p>Systems that compound.</p><span class="card-btn">Learn More</span></div></a>
-      <a href="mental-focus.html" class="card focus"><div class="card-content"><h3>Focus</h3><p>Eliminate distraction.</p><span class="card-btn">Learn More</span></div></a>
+      <a href="mental-discipline.html" class="card discipline"><div class="card-content"><h3>Discipline</h3><p>Execute daily.</p><span class="card-btn">Learn More</span></div></a>
+      <a href="mental-habits.html" class="card habits"><div class="card-content"><h3>Habits</h3><p>Compounding systems.</p><span class="card-btn">Learn More</span></div></a>
+      <a href="mental-focus.html" class="card focus"><div class="card-content"><h3>Focus</h3><p>Zero distraction.</p><span class="card-btn">Learn More</span></div></a>
     </div>
   </section>
 
@@ -294,33 +308,20 @@
   <section class="testimonials">
     <h2>Student Results</h2>
 
-    <div class="quote">
-      “I gained confidence I didn’t know was possible. People treat me differently now.”
-      <span>— Jason M.</span>
-    </div>
-
-    <div class="quote">
-      “The structure alone changed my life. Everything feels intentional.”
-      <span>— Mark L.</span>
-    </div>
-
-    <div class="quote">
-      “I finally look how I feel inside. Mog University gave me direction.”
-      <span>— Alex R.</span>
-    </div>
+    <div class="quote">“I look different, think different, and act with intention now.”<span>— Jason M.</span></div>
+    <div class="quote">“The structure changed everything. No fluff.”<span>— Mark L.</span></div>
+    <div class="quote">“This gave me direction I never had.”<span>— Alex R.</span></div>
   </section>
 
-  <!-- PERSONALIZED COURSE -->
+  <!-- PERSONALIZED -->
   <section class="personalized">
     <h2>Built Around You</h2>
     <p>
-      Mog University is not a generic program. It adapts to your body type,
-      schedule, goals, and starting point — delivering a personalized roadmap
-      for both physical and mental evolution.
+      Mog University adapts to your body type, schedule, and goals —
+      delivering a personalized roadmap for complete transformation.
     </p>
     <p>
       Every module compounds. Every action is deliberate.
-      This is controlled transformation.
     </p>
   </section>
 
@@ -330,3 +331,4 @@
 
 </body>
 </html>
+
